@@ -35,18 +35,22 @@ function App() {
       .then(response => {
         setData(data.concat(response.data));
         toogleModalIncluir();
+        // alert("Aluno inserido com sucesso")
       }).catch(error => {
         console.log(error);
       })
   }
 
   const alunoDelete = async () => {
-    await axios.delete(baseUrl + "/" + alunoSelecionado.id)
-      .then(response => {
-        new Notification("Excluido");
-      }).catch(error => {
-        console.log(error)
-      })
+    const response = await axios.delete(baseUrl + "/" + alunoSelecionado.id)
+    try {
+      if (response.status === 200) {
+        alert("Aluno excluído com sucesso");
+        window.location.reload();
+      }
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   useEffect(() => {
@@ -68,6 +72,12 @@ function App() {
       [name]: value
     })
     console.log(alunoSelecionado)
+  }
+
+  const selecionarAluno = (aluno, opcao) => {
+    setAlunoSelecionado(aluno);
+    (opcao === "Editar") && toogleModalEditar();
+    (opcao === "Excluir") && alunoDelete();
   }
 
   return (
@@ -96,8 +106,8 @@ function App() {
               <td>{aluno.email}</td>
               <td>{aluno.idade}</td>
               <td>
-                <button className="btn btn-primary">Editar</button>{" "}
-                <button className="btn btn-danger" onClick={() => alunoDelete()}>Excluir</button>
+                <button className="btn btn-primary" onClick={() => selecionarAluno(aluno, "Editar")}>Editar</button>{" "}
+                <button className="btn btn-danger" onClick={() => selecionarAluno(aluno, "Excluir")}>Excluir</button>
               </td>
             </tr>
           ))}
