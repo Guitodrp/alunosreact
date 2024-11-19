@@ -1,10 +1,14 @@
-.aluno-container{
+.aluno-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   padding: 5 10px;
   margin: 30px auto;
   text-align: center;
+  background: linear-gradient(135deg, #62bfcf, #a1c4fd); /* Gradiente */
+  min-height: 90vh;
+  padding: 20px;
 }
+
 
 .aluno-container header{
   display: flex;
@@ -36,6 +40,6 @@ table, th, td{
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  padding: 20px;
+  padding: 2px;
   text-align: center;
 }

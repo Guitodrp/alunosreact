@@ -60,7 +60,7 @@ function App() {
       .then(response => {
         setData(data.concat(response.data));
         toogleModalIncluir();
-        // alert("Aluno inserido com sucesso")
+        window.location.reload();
       }).catch(error => {
         console.log(error);
       })
@@ -156,11 +156,11 @@ function App() {
           <ModalBody>
             <div className='form-group'>
               <label>Nome:</label>
-              <input type='text' name='nome' className='form-control' onChange={handleChange} />
+              <input type='text' name='nome' className='form-control' required maxLength={40} onChange={handleChange} />
               <label>Email:</label>
-              <input type='text' name='email' className='form-control' onChange={handleChange} />
+              <input type='email' name='email' className='form-control' required maxLength={40} onChange={handleChange} />
               <label>Idade:</label>
-              <input type="number" name='idade' className="form-control" onChange={handleChange} />
+              <input type="number" name='idade' className="form-control" required min={0} max={25} onChange={handleChange} />
             </div>
           </ModalBody>
           <ModalFooter>
@@ -176,11 +176,11 @@ function App() {
               <label>Id:</label>
               <input name='id' className='form-control' disabled value={alunoSelecionado && alunoSelecionado.id}></input>
               <label>Nome:</label>
-              <input type='text' name='nome' className='form-control' required value={alunoSelecionado && alunoSelecionado.nome} onChange={handleChange} />
+              <input type='text' name='nome' className='form-control' maxLength={40} required value={alunoSelecionado && alunoSelecionado.nome} onChange={handleChange} />
               <label>Email:</label>
-              <input type='text' name='email' className='form-control' required value={alunoSelecionado && alunoSelecionado.email} onChange={handleChange} />
+              <input type='email' name='email' className='form-control' maxLength={40} required value={alunoSelecionado && alunoSelecionado.email} onChange={handleChange} />
               <label>Idade:</label>
-              <input type="number" name='idade' className="form-control" required value={alunoSelecionado && alunoSelecionado.idade} onChange={handleChange} />
+              <input type="number" name='idade' className="form-control" min={0} max={25} required value={alunoSelecionado && alunoSelecionado.idade} onChange={handleChange} />
             </div>
           </ModalBody>
           <ModalFooter>
