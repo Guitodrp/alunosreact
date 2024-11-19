@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import cad from './assets/cad.jpeg'
+import cad2 from './assets/cad2.png'
+import cad3 from './assets/cad3.png'
+import cad4 from './assets/cad4.png'
 import InserirAluno from './Modals/inserirAlunos';
 
 function App() {
@@ -64,15 +67,6 @@ function App() {
   }
 
   const alunoDelete = async () => {
-    // const response = await axios.delete(baseUrl + "/" + alunoSelecionado.id)
-    // try {
-    //   if (response.status === 200) {
-    //     alert("Aluno excluído com sucesso");
-    //     window.location.reload();
-    //   }
-    // } catch (error) {
-    //   console.log(error)
-    // }
     await axios.delete(baseUrl + "/" + alunoSelecionado.id)
       .then(response => {
         setData(data.filter(aluno => aluno.id !== response.data));
@@ -118,10 +112,18 @@ function App() {
   return (
     <div className='aluno-container'>
       <br />
-      <h3>Cadastro de Alunos</h3>
+      <h3 >Cadastro de Alunos</h3>
       <header>
-        <img src={cad} alt='Cadastro'></img>
-        <button className='btn btn-success' onClick={() => toogleModalIncluir()}>Incluir Novo Aluno</button>
+        <div
+          className="box-container" style={{
+            display: 'flex', alignItems: 'center', border: '1px solid #ddd', padding: '16px',
+            borderRadius: '8px', maxWidth: '250px', margin: '0 auto', cursor: 'pointer'
+          }} onClick={() => toogleModalIncluir()} >
+          <img src={cad4} alt="Cadastro" style={{ width: '70px', height: 'auto', borderRadius: '8px', marginRight: '16px' }} />
+          <p style={{ fontWeight: 'bold', fontSize: '15px', margin: 0 }} >
+            Cadastre aqui um novo aluno(a)
+          </p>
+        </div>
       </header>
       <table class="table table-bordered" >
         <thead>
@@ -172,7 +174,7 @@ function App() {
           <ModalBody>
             <div className='form-group'>
               <label>Id:</label>
-              <input type='text' name='id' className='form-control' readOnly value={alunoSelecionado && alunoSelecionado.id}></input>
+              <input name='id' className='form-control' disabled value={alunoSelecionado && alunoSelecionado.id}></input>
               <label>Nome:</label>
               <input type='text' name='nome' className='form-control' required value={alunoSelecionado && alunoSelecionado.nome} onChange={handleChange} />
               <label>Email:</label>
