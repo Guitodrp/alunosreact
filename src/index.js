@@ -7,7 +7,7 @@ import Menu from './Menu';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Menu /> */}
+    <Menu />
     <App />
   </React.StrictMode>
 );
