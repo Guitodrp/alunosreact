@@ -1,8 +1,8 @@
 import './Menu.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './assets/logo.png';
-
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'; // Importe o Link do React Router
 
 const Menu = () => {
     const [activeMenu, setActiveMenu] = useState(null);
@@ -19,36 +19,36 @@ const Menu = () => {
             </div>
             <ul className="navigation">
                 <li className="parent">
-                    <a className="link" href="#">
+                    <Link className="link" to="/">
                         Inicio
-                    </a>
+                    </Link>
                 </li>
                 <li
                     className={`parent ${activeMenu === 'clients' ? 'active' : ''}`}
                     id="clients"
                     onClick={() => toggleMenu('clients')}
                 >
-                    <a className="link" href="#">
+                    <Link className="link" to="#">
                         <i className="fas fa-minus"></i> Alunos{" "}
                         <i className="fas fa-plus"></i>
-                    </a>
+                    </Link>
                     <ul className="subnavigation">
                         <li>
-                            <a className="link" href="#">
+                            <Link className="link" to="/cadastro"> {/* Usando o Link para navegar para a página de cadastro */}
                                 Cadastro
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a className="link" href="#">
+                            <Link className="link" to="/listagem"> {/* Adapte se precisar de uma rota para "Listagem" */}
                                 Listagem
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </li>
                 <li className="parent">
-                    <a className="link" href="#">
+                    <Link className="link" to="/sobrenos">
                         Sobre nós
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </nav>
