@@ -1,4 +1,4 @@
-import './Menu.css';
+import './menu.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './assets/logo.png';
 import React, { useState } from "react";

@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './index.css';
-import App from './App';
-import Menu from './Menu';
-import Inicio from './Inicio';
-import SobreNos from './SobreNos';
-import Listagem from './Listagem';
+import App from './app';
+import Menu from './menu';
+import Inicio from './inicio';
+import SobreNos from './sobrenos';
+import Listagem from './listagem';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

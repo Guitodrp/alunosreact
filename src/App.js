@@ -1,13 +1,9 @@
-import './App.css';
+import './app.css';
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
-import cad from './assets/cad.jpeg'
-import cad2 from './assets/cad2.png'
-import cad3 from './assets/cad3.png'
 import cad4 from './assets/cad4.png'
-import InserirAluno from './Modals/inserirAlunos';
 
 function App() {
   const baseUrl = 'https://localhost:44390/api/alunos';

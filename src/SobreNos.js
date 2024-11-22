@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import './App.css';
+import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import sobrenos from './assets/sobrenos.jpg'
 

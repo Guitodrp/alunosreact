@@ -55,8 +55,7 @@ table{
   padding: 2px;
   text-align: center;
 }
-th, td{  
+th, td, tr{  
   text-align: center;
-  justify-content: center;
   color: rgb(0, 0, 0);
 }
