@@ -124,7 +124,7 @@ function App() {
           </p>
         </div>
       </header>
-      <table class="table table-bordered" >
+      <table>
         <thead>
           <tr>
             <th scope="col">#</th>

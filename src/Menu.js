@@ -15,7 +15,7 @@ const Menu = () => {
         <nav className="navigationWrapper">
             <div className="logoWrapper">
                 <img src={logo} alt="Cadastro" style={{ width: '40px', height: 'auto', borderRadius: '8px', marginRight: '16px' }} />
-                <span className="stylish">School</span>
+                <span className="stylish">High School</span>
             </div>
             <ul className="navigation">
                 <li className="parent">

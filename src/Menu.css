@@ -18,7 +18,7 @@ body {
   color: white;
   text-transform: uppercase;
   overflow: visible; /* Permite que o submenu saia do contêiner */
-  width: 600px;
+  width: 1000px;
 }
 
 .navigation {

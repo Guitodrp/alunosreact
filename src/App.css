@@ -1,6 +1,6 @@
 .aluno-container {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1000px;
   padding: 5 10px;
   margin: 30px auto;
   text-align: center;
@@ -9,6 +9,9 @@
   background: linear-gradient(180deg, #1c9199, #a1c4fd); /* Gradiente */
   min-height: 85vh;
   padding: 20px;
+}
+.aluno-container section {
+  background: linear-gradient(180deg, #1c9199e8, #a1c4fd); /* Gradiente */
 }
 
 .aluno-container h3 {
@@ -42,11 +45,18 @@
   border-color: #42b924;
 }
 
-table, th, td{
-  border: 1px solid black;
+table{
+  border: 2px solid rgba(255, 255, 255, 0.281);
+  width: 950px;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  background-color: linear-gradient(180deg, #1c9199e8, #a1c4fd); /* Gradiente */
   padding: 2px;
   text-align: center;
+}
+th, td{  
+  text-align: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
 }
