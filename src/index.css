@@ -1,13 +1,19 @@
 body {
+  font-family: "Roboto", sans-serif; /* Alinha a fonte ao segundo código */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex; /* Configura o layout flexbox */
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente */
+  background: linear-gradient(135deg, #62bfcf, #a1c4fd); /* Aplica o mesmo gradiente */
+  -webkit-font-smoothing: antialiased; /* Mantém suavização de fontes */
+  -moz-osx-font-smoothing: grayscale; /* Mantém suavização de fontes */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Roboto", monospace; /* Ajusta para Roboto com estilo monoespaçado */
+  color: #ffffff; /* Altera a cor para combinar com um layout mais limpo */
+  background-color: #1c9199; /* Destaca o código com o mesmo fundo do menu */
+  padding: 5px 10px; /* Adiciona espaço interno */
+  border-radius: 4px; /* Adiciona bordas arredondadas */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Adiciona destaque */
 }

@@ -111,8 +111,7 @@ function App() {
 
   return (
     <div className='aluno-container'>
-      <br />
-      <h3 >Cadastro de Alunos</h3>
+      <h3>Cadastro de Alunos</h3>
       <header>
         <div
           className="box-container" style={{

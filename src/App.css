@@ -4,11 +4,18 @@
   padding: 5 10px;
   margin: 30px auto;
   text-align: center;
+  font-family:"Roboto", sans-serif;
+  color: white;
   background: linear-gradient(180deg, #1c9199, #a1c4fd); /* Gradiente */
   min-height: 85vh;
   padding: 20px;
 }
 
+.aluno-container h3 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
 
 .aluno-container header{
   display: flex;
